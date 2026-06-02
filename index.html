@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhawna Security Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#222;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#0a1d37;
+    color:white;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:15px;
+    font-size:15px;
+}
+
+.topbar span{
+    margin-right:20px;
+}
+
+/* NAVBAR */
+
+nav{
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+}
+
+.logo-text h2{
+    color:#e63946;
+    font-size:32px;
+}
+
+.logo-text p{
+    color:#0a1d37;
+    font-weight:600;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff9800;
+}
+
+.call-btn{
+    background:#0a1d37;
+    color:white;
+    padding:12px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+    background:
+    linear-gradient(to right,rgba(5,15,35,0.95),rgba(5,15,35,0.6)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-text h1{
+    font-size:75px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text h1 span{
+    color:#ffb703;
+}
+
+.hero-text p{
+    font-size:20px;
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.btn{
+    padding:16px 35px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.call{
+    background:#ff9800;
+    color:white;
+}
+
+.whatsapp{
+    background:#25d366;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* FEATURES */
+
+.features{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:-70px;
+}
+
+.feature{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.feature h3{
+    margin:15px 0;
+    color:#0a1d37;
+}
+
+/* SERVICES */
+
+.services{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:50px;
+    color:#0a1d37;
+}
+
+.section-title p{
+    color:#666;
+    margin-top:10px;
+}
+
+.service-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.service{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.service:hover{
+    transform:translateY(-10px);
+}
+
+.service img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.service-content{
+    padding:25px;
+}
+
+.service-content h3{
+    color:#0a1d37;
+    margin-bottom:10px;
+}
+
+.service-content p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* ABOUT */
+
+.about{
+    padding:100px 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    background:white;
+}
+
+.about img{
+    width:100%;
+    border-radius:25px;
+}
+
+.about-text h2{
+    font-size:50px;
+    color:#0a1d37;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:100px 8%;
+    background:#0a1d37;
+    color:white;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-box h2{
+    font-size:45px;
+    margin-bottom:25px;
+}
+
+.contact-box p{
+    margin-bottom:18px;
+    color:#ddd;
+    font-size:18px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+input, textarea{
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+textarea{
+    resize:none;
+    height:140px;
+}
+
+.submit{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#05101f;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero-text h1{
+        font-size:50px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .about,
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<div>
+<span>📍 Cosmo Valley, Sirol, Gwalior</span>
+</div>
+
+<div>
+<span>📞 8630973012</span>
+<span>📞 9402878228</span>
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+
+<div class="logo-text">
+<h2>BHAWNA</h2>
+<p>SECURITY SERVICES</p>
+</div>
+
+</div>
+
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">SERVICES</a></li>
+<li><a href="#">CONTACT</a></li>
+</ul>
+
+<a href="tel:8630973012" class="call-btn">
+📞 CALL NOW
+</a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+YOUR SAFETY <br>
+OUR <span>PRIORITY</span>
+</h1>
+
+<p>
+Professional and trusted security agency providing
+highly trained guards for offices, industries,
+events, apartments and residential security.
+</p>
+
+<div class="hero-buttons">
+
+<a href="tel:8630973012" class="btn call">
+📞 CALL NOW
+</a>
+
+<a href="https://wa.me/918630973012" class="btn whatsapp">
+💬 WHATSAPP
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="feature">
+<h3>Professional Guards</h3>
+<p>Experienced and disciplined security staff.</p>
+</div>
+
+<div class="feature">
+<h3>24x7 Security</h3>
+<p>Round the clock protection and support.</p>
+</div>
+
+<div class="feature">
+<h3>Quick Response</h3>
+<p>Fast action during emergencies and issues.</p>
+</div>
+
+<div class="feature">
+<h3>Trusted Agency</h3>
+<p>Reliable and customer focused services.</p>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<div class="section-title">
+<h2>Our Services</h2>
+<p>Professional security solutions for every need</p>
+</div>
+
+<div class="service-boxes">
+
+<div class="service">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
+<div class="service-content">
+<h3>Corporate Security</h3>
+<p>Professional guards for offices and business areas.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop">
+<div class="service-content">
+<h3>Event Security</h3>
+<p>Security arrangements for parties and events.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+<div class="service-content">
+<h3>Residential Security</h3>
+<p>Protection for apartments and homes.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+<div class="about-text">
+
+<h2>About Us</h2>
+
+<p>
+Bhawna Security Services is a trusted security agency
+providing highly trained guards and professional
+security solutions for every type of requirement.
+</p>
+
+<p>
+Our mission is to ensure safety, discipline,
+trust and customer satisfaction with quality service.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<div class="contact-container">
+
+<div class="contact-box">
+
+<h2>Contact Us</h2>
+
+<p>📍 Cosmo Valley, Sirol, Gwalior</p>
+<p>📞 8630973012</p>
+<p>📞 9402878228</p>
+<p>✉️ bhawnasecurity@gmail.com</p>
+
+</div>
+
+<div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<input type="text" placeholder="Phone Number">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button class="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Bhawna Security Services | All Rights Reserved
+
+</footer>
+
+</body>
+</html>
